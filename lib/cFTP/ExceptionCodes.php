@@ -120,6 +120,11 @@
       * Could not add file data from open file pointer
       */
      const AddFileData      = 34;
+     
+     /**
+      * Could not delete file
+      */
+     const Delete           = 35;
  }
 
 ?>

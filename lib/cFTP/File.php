@@ -122,6 +122,17 @@
          
          return $this;
      }
+     
+     /**
+      * Deletes file
+      */
+     public function delete()
+     {
+         $success = @ftp_delete($this->handle, $this->name);
+         
+         if( $success === false )
+             throw new cFTP_Exception("Could not delete file", 35);
+     }
  }
 
 ?>
