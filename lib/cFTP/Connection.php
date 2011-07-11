@@ -186,6 +186,9 @@
          
          if( isset($options['timeout']) ) 
             $this->setTimeout( $options['timeout'] );
+         
+         if( isset($options['ssl']) ) 
+            $this->useSSL ( $options['ssl'] );
      }     
  }
 
