@@ -1,0 +1,769 @@
+<html>
+<head>
+<title>Docs For Class cFTP_Session</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css">
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/> 
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+    <td class="header_top">cFTP</td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_cFTP.html" class="menu">class tree: cFTP</a> ]
+		  [ <a href="../elementindex_cFTP.html" class="menu">index: cFTP</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_LICENSE.html">LICENSE</a></p>
+			</div>
+      <b>Packages:</b><br />
+              <a href="../li_cFTP.html">cFTP</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../cFTP/_lib---cFTP---Autoload.php.html">		Autoload.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---Chmod.php.html">		Chmod.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---Connection.php.html">		Connection.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---Directory.php.html">		Directory.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---Exception.php.html">		Exception.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---ExceptionCodes.php.html">		ExceptionCodes.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---File.php.html">		File.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---Item.php.html">		Item.php
+		</a><br>
+			<a href="../cFTP/_lib---cFTP---Session.php.html">		Session.php
+		</a><br>
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../cFTP/cFTP_Autoloader.html">cFTP_Autoloader</a><br />
+	    		<a href="../cFTP/cFTP_Chmod.html">cFTP_Chmod</a><br />
+	    		<a href="../cFTP/cFTP_Connection.html">cFTP_Connection</a><br />
+	    		<a href="../cFTP/cFTP_Directory.html">cFTP_Directory</a><br />
+	    		<a href="../cFTP/cFTP_Exception.html">cFTP_Exception</a><br />
+	    		<a href="../cFTP/cFTP_ExceptionCodes.html">cFTP_ExceptionCodes</a><br />
+	    		<a href="../cFTP/cFTP_File.html">cFTP_File</a><br />
+	    		<a href="../cFTP/cFTP_Item.html">cFTP_Item</a><br />
+	    		<a href="../cFTP/cFTP_Session.html">cFTP_Session</a><br />
+	  </div>
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: cFTP_Session</h1>
+Source Location: /lib/cFTP/Session.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<pre></pre><br />
+<div class="description">Represents a FTP session</div><br /><br />
+
+
+
+
+
+
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../cFTP/cFTP_Session.html#var$connection">$connection</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#var$handle">$handle</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../cFTP/cFTP_Session.html#method__construct">__construct</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#method__destruct">__destruct</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodclose">close</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodconnect">connect</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methoddir">dir</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methoddoCommand">doCommand</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methoddoSiteCommand">doSiteCommand</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodexecute">execute</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodgetCurrent">getCurrent</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodgetDirectory">getDirectory</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodgetOptionValue">getOptionValue</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodgetSystemType">getSystemType</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodlogin">login</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodsetOptionValue">setOptionValue</a></li>
+    <li><a href="../cFTP/cFTP_Session.html#methodsetPassiveMode">setPassiveMode</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a12">12</a>]<br />
+Represents a FTP session<br /><br /></div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="var$connection"></a>
+	<p></p>
+	<h4>$connection = <span class="value"></span></h4>
+	<p>[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a26">26</a>]</p>
+  Contains cFTP_Session object<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../cFTP/cFTP_Connection.html">cFTP_Connection</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="var$handle"></a>
+	<p></p>
+	<h4>$handle = <span class="value"></span></h4>
+	<p>[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a19">19</a>]</p>
+  Contains FTP session handle<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td>Resource</td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a35">35</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>cFTP_Session __construct(
+[<a href="../cFTP/cFTP_Connection.html">cFTP_Connection</a>
+$connection = null])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Creates new cFTP_Session object<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../cFTP/cFTP_Connection.html">cFTP_Connection</a>&nbsp;&nbsp;</td>
+        <td><b>$connection</b>&nbsp;&nbsp;</td>
+        <td>[$connection] Connection details, can be omitted</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a41">41</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodclose"></a>
+	<h3>method close <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a76">76</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void close(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Closes the session<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodconnect"></a>
+	<h3>method connect <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a54">54</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Session.html">cFTP_Session</a> connect(
+<a href="../cFTP/cFTP_Connection.html">cFTP_Connection</a>
+$connection)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Connects to FTP server<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>This</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../cFTP/cFTP_Connection.html">cFTP_Connection</a>&nbsp;&nbsp;</td>
+        <td><b>$connection</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddir"></a>
+	<h3>method dir <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a134">134</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Directory.html">cFTP_Directory</a> dir(
+[string
+$name = '.'])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Alias for getDirectory<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Directory</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td>Directory name</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddoCommand"></a>
+	<h3>method doCommand <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a146">146</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array doCommand(
+string
+$command)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sends an arbitrary command to the FTP server<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Response</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$command</b>&nbsp;&nbsp;</td>
+        <td>Command to execute</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddoSiteCommand"></a>
+	<h3>method doSiteCommand <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a175">175</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Session.html">cFTP_Session</a> doSiteCommand(
+string
+$cmd)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Executes SITE command to the FTP server<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>This</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$cmd</b>&nbsp;&nbsp;</td>
+        <td>Command</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodexecute"></a>
+	<h3>method execute <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a158">158</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Session.html">cFTP_Session</a> execute(
+string
+$command)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sends a SITE EXEC command request to the FTP server<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>This</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$command</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetCurrent"></a>
+	<h3>method getCurrent <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a192">192</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getCurrent(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns directory name<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Directtory name</td>
+  </tr>
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>cFTP_Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetDirectory"></a>
+	<h3>method getDirectory <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a122">122</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Directory.html">cFTP_Directory</a> getDirectory(
+[string
+$name = '.'])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Gets directory<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Directory</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td>Directory name</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetOptionValue"></a>
+	<h3>method getOptionValue <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a226">226</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed getOptionValue(
+int
+$option)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns FTP option value<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>Option Value</td>
+  </tr>
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>cFTP_Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$option</b>&nbsp;&nbsp;</td>
+        <td>Option id. Supported are: <ol><li><div class="src-line"><span class="src-id">FTP_TIMEOUT_SEC</span></div></li>
+</ol>, <ol><li><div class="src-line"><span class="src-id">FTP_AUTOSEEK</span></div></li>
+</ol></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetSystemType"></a>
+	<h3>method getSystemType <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a207">207</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getSystemType(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Returns system type<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>System type</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodlogin"></a>
+	<h3>method login <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a92">92</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Session.html">cFTP_Session</a> login(
+[string
+$user = 'anonymous'], [string
+$password = ''])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Log in to FTP Server. To log in as anonymous, do not specify any parameters<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>This</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$user</b>&nbsp;&nbsp;</td>
+        <td>Username</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$password</b>&nbsp;&nbsp;</td>
+        <td>Password</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetOptionValue"></a>
+	<h3>method setOptionValue <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a245">245</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../cFTP/cFTP_Session.html">cFTP_Session</a> setOptionValue(
+int
+$option, type
+$value)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets FTP option value<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>This</td>
+  </tr>
+  <tr>
+    <td><b>throws:</b>&nbsp;&nbsp;</td><td>cFTP_Exception</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">int&nbsp;&nbsp;</td>
+        <td><b>$option</b>&nbsp;&nbsp;</td>
+        <td>Option id. Supported are: <ol><li><div class="src-line"><span class="src-id">FTP_TIMEOUT_SEC</span></div></li>
+</ol>, <ol><li><div class="src-line"><span class="src-id">FTP_AUTOSEEK</span></div></li>
+</ol></td>
+      </tr>
+          <tr>
+        <td class="type">type&nbsp;&nbsp;</td>
+        <td><b>$value</b>&nbsp;&nbsp;</td>
+        <td>Value to set</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetPassiveMode"></a>
+	<h3>method setPassiveMode <span class="smalllinenumber">[line <a href="../__filesource/fsource_cFTP__libcFTPSession.php.html#a107">107</a>]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setPassiveMode(
+bool
+$bool)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		Sets passive mode On/Off<br /><br /><br /><br />
+<h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">bool&nbsp;&nbsp;</td>
+        <td><b>$bool</b>&nbsp;&nbsp;</td>
+        <td>Set passive mode?</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Mon, 11 Jul 2011 16:01:10 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.3</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
