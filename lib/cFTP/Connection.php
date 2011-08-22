@@ -49,7 +49,7 @@
       * @param int    $port    The alternate port to connect to
       * @param int    $timeout The timeout for all subsequent network operations 
       */     
-     public function __construct( $host, $useSSL = false, $port = 21, $timeout = 90 )
+     public function __construct( $host = '', $useSSL = false, $port = 21, $timeout = 90 )
      {
          $this->setHostName($host);
          $this->setPort    ($port);
@@ -108,7 +108,7 @@
       *
       * @return String[String]
       */
-     public function getConnectionOptions()
+     public function getConnectionArray()
      {
          return array
          (
@@ -171,7 +171,7 @@
       *
       * @param String[String] $options Array with connect options
       */
-     public function setConnectionOptions( array $options )
+     public function setConnectionArray( array $options )
      {
          if( !isset($options['host']) )
              throw new InvalidArgumentException(

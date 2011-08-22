@@ -12,6 +12,7 @@
 
  
 # Where to connect
+# Mistake made intentionally
  $ftp_host = 'fttp.mozilla.org';
  
 # Some set-up

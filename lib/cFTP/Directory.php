@@ -73,20 +73,20 @@
          $res = array();
          foreach( $tmp as $e )
          {             
-             $d = new cFTP_Directory($this->handle, /*$this->name . '/' . */  $e);
+             $d = new cFTP_Directory($this->handle,  $e);
              
              if( $d->isDirectory() )
                  $res[] = $d;
              else
              {
-                 $res[] = new cFTP_File($this->handle, /*$this->name . '/' .*/ $e);
+                 $res[] = new cFTP_File($this->handle, $e);
              }
          }  
          return $res;
      }
      
      /**
-      * Changes directory to this directory. Just does `cd`
+      * Changes directory to this directory. Just does `cd` on current directory
       * 
       * @throws cFTP_Exception
       * 
@@ -94,16 +94,16 @@
       */
      public function open()
      {
-         $success = @ftp_chdir($this->handle, $this->name);
+         $success = ftp_chdir($this->handle, $this->name);
          
-         if( !$success )
+         if( $success === false )
              throw new cFTP_Exception( "Could not change directory", 22 );
          
          return $this;
      }
      
      /**
-      * Returns files in directory
+      * Returns cFTP_File object
       *
       * @param string $name Name
       * 
@@ -111,7 +111,7 @@
       */
      public function getFile($name)
      {
-         return new cFTP_File($this->handle, $name);
+         return new cFTP_File($this->handle, $this->name . '/' . $name);
      }
      
      /**
@@ -123,7 +123,7 @@
       */
      public function file($name)
      {
-         return new cFTP_File($this->handle, $name);
+         return new cFTP_File($this->handle, $this->name . '/' . $name);
      }
      
      /**
@@ -252,14 +252,14 @@
          $res = array();
          foreach( $tmp as $e )
          {             
-             $d = new cFTP_Directory($this->handle, /*$this->name . '/' . */  $e);
+             $d = new cFTP_Directory($this->handle, $e);
              
              if( $d->isDirectory() )
-                 $res[] = $callback($d);
+                 $res[] = call_user_func_array ($callback, array($d));
              else
              {
                  $res[] = $callback( 
-                     new cFTP_File($this->handle, /*$this->name . '/' .*/ $e) );
+                     new cFTP_File($this->handle, $e) );
              }
          }        
          return $res;

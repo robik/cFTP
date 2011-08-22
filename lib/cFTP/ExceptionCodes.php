@@ -125,6 +125,11 @@
       * Could not delete file
       */
      const Delete           = 35;
+     
+     /**
+      * Could not rename file
+      */
+     const Rename           = 36;
  }
 
 ?>

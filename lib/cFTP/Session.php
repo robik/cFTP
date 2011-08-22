@@ -91,6 +91,9 @@
       */
      public function login( $user = 'anonymous', $password = '' )
      {
+         $this->user = $user;
+         $this->password = $password;
+         
          $success = @ftp_login( $this->handle, $user, $password );
          
          if( !$success )
@@ -250,6 +253,31 @@
              throw new cFTP_Exception( "Could not set option value", 10 );
          
          return $this;
+     }
+     
+     /**
+      * Builds URI that you can use to get current directory
+      * 
+      * Schema: ftp://username:password@host:port/dirs
+      * 
+      * @param bool $include_pwd Include current directory path to URI?
+      *
+      * @return string URI
+      */
+     public function buildURI($include_pwd = true)
+     {
+         $r  = 'ftp://';
+         $r .= $this->user;
+         if( $this->password )
+             $r .= ':'.$this->password;
+         
+         $r .= '@'.$this->connection->getHostName();
+         $r .= ':'.$this->connection->getPort();
+         
+         if( $include_pwd && $pwd = @ftp_pwd($this->handle) )
+            $r .= '/'.ltrim($pwd, '/');
+         
+         return $r;
      }
      
  }

@@ -34,12 +34,18 @@
      
      /**
       * Changes element CHMOD
+      * 
+      * The param can be also instance of cFTP_Chmod
       *
       * @param int $chmod CHMOD
       * @throws cFTP_Exception
       */
      public function changeMode($chmod)
      {
+         if($chmod instanceof cFTP_Chmod)
+             $chmod = $chmod->getChmod();
+         
+         
          $success = @ftp_chmod($this->handle, $chmod, $filename);
          
          if( !$success )

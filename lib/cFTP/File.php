@@ -24,7 +24,7 @@
              throw new InvalidArgumentException( 'Specified argument is not valid resource' );
          
          parent::__construct($handle, $name);
-     }
+     }     
      
      /**
       * Downloads file
@@ -56,9 +56,9 @@
       * 
       * @return cFTP_File 
       */
-     public function upload($localFile, $mode = FTP_BINARY, $startPos = 0)
+     public function upload($localFile, $mode = FTP_ASCII, $startPos = 0)
      {
-         $success = @ftp_put( $this->handle, $this->name, $localName, $mode, $startPos );
+         $success = @ftp_put( $this->handle, $this->name, $localFile, $mode, $startPos );
          
          if( !$success )
              throw new cFTP_Exception( "Could not upload file", 31 );
@@ -93,9 +93,9 @@
       * 
       * @return cFTP_File This
       */
-     public function fGet($handle, $mode = FTP_BINARY, $startPos = 0)
+     public function fGet($handle, $mode = FTP_ASCII, $startPos = 0)
      {         
-         $success = @ftp_fget( $this->handle, $this->name, $handle, $mode, $startPos );
+         $success = @ftp_fget( $this->handle, $handle, $this->name, $mode, $startPos );
       
          if( !$success )
              throw new cFTP_Exception( "Could not get file data", 33 );
@@ -115,7 +115,7 @@
       */
      public function fPut($handle, $mode = FTP_BINARY, $startPos = 0)
      {         
-         $success = @ftp_fput( $this->handle, $handle, $this->name, $mode, $startPos );
+         $success = @ftp_fput( $this->handle,  $this->name, $handle, $mode, $startPos );
       
          if( !$success )
              throw new cFTP_Exception( "Could not download file", 34 );
@@ -131,7 +131,24 @@
          $success = @ftp_delete($this->handle, $this->name);
          
          if( $success === false )
-             throw new cFTP_Exception("Could not delete file", 35);
+             throw new cFTP_Exception("Could not delete file", 35);         
+     }
+     
+     /**
+      * Renames current file
+      *
+      * @param string $new_name New file name
+      * @return cFTP_File 
+      */
+     public function rename($new_name)
+     {         
+         $success = @ftp_rename($this->handle, $this->name, $new_name);
+         $this->name = $new_name;
+         
+         if( $success === false )
+             throw new cFTP_Exception("Could not rename file", 36);
+         
+         return $this;
      }
  }
 
