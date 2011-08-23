@@ -211,7 +211,7 @@
       * 
       * @return bool Existence
       */
-     public function exists( $childName )
+     public function childExists( $childName )
      {
          $elements = $this->dir('..')->listItems();
          

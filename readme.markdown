@@ -1,8 +1,22 @@
 # cFTP
 
-cFTP is simple FTP library written in PHP5.
+cFTP is simple (and fast) FTP library written in PHP5.
 
 ## Getting started
+
+### Features
+
+ - __Fast__ 
+    
+    Comparing to PHP FTP stream wrapper it's about **30%** faster.
+
+ - __Nice API__
+    
+    Nice Object-Oriented API provides comfortable programming.
+
+ - __Easy to learn__
+    
+    Extended readme and examples helps you start using cFTP.
 
 ### Requirements
 
@@ -22,7 +36,8 @@ Copy `lib/cFTP` directory to your project libraries directory.
  - [Walking trough items](https://github.com/robik/cFTP/blob/master/examples/ListingItems2.php)
  - [Existence check](https://github.com/robik/cFTP/blob/master/examples/ExistenceCheck.php)
  - [Exceptions](https://github.com/robik/cFTP/blob/master/examples/Exceptions.php)
- - [Exceptions #2](https://github.com/robik/cFTP/blob/master/examples/Exceptions2.php) 
+ - [Exceptions #2](https://github.com/robik/cFTP/blob/master/examples/Exceptions2.php)
+ - [Downloading and Uploading](https://github.com/robik/cFTP/blob/master/examples/DownloadingAndUploading.php)
 
 
 ## Basics
@@ -132,13 +147,13 @@ Above code should result in:
     
         echo 'foo is a'.($ftp->dir('foo')->isDirectory() ? 'directory' : 'file');
 
- - #### exists( _$name_ )
+ - #### childExists( _$name_ )
 
     Check if specified child(files and directories) exists.
     
     Example:
     
-        $ftp->dir('foo')->exists('off');
+        $ftp->dir('foo')->childExists('off');
 
  - #### walk( _closure $callback_, _$filter_ )
 

@@ -62,6 +62,11 @@
       */
      const SetOptionValue   = 10;
      
+     /**
+      * Could not chmod
+      */
+     const CHMOD            = 11;
+     
      
      
      /**
@@ -129,7 +134,8 @@
      /**
       * Could not rename file
       */
-     const Rename           = 36;
+     const Rename           = 36;     
+     
  }
 
 ?>

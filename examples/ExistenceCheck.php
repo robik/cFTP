@@ -26,13 +26,13 @@
  $item = 'foo'; 
  
  echo "Item '$item' ";
- echo $root->exists($item) ? 'exists' : 'doesn\'t exists'; 
+ echo $root->childExists($item) ? 'exists' : 'doesn\'t exists'; 
  echo '<br />';
  
  $item = 'pub'; 
  
  echo "Item '$item' ";
- echo $root->exists($item) ? 'exists' : 'doesn\'t exists';
+ echo $root->childExists($item) ? 'exists' : 'doesn\'t exists';
  
   
 # Close the connection

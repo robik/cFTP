@@ -56,6 +56,8 @@
      
      /**
       * Changes name of element
+      * 
+      * @param string $newName New name
       *
       * @throws cFTP_Exception
       * 
@@ -66,7 +68,7 @@
          $success = @ftp_rename($this->handle, $this->name, $newName);
          
          if( !$success )
-             throw new cFTP_Exception( "Could not rename" );
+             throw new cFTP_Exception( "Could not rename", 36 );
          
          return $this;
      }

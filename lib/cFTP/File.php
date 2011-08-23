@@ -132,24 +132,8 @@
          
          if( $success === false )
              throw new cFTP_Exception("Could not delete file", 35);         
-     }
-     
-     /**
-      * Renames current file
-      *
-      * @param string $new_name New file name
-      * @return cFTP_File 
-      */
-     public function rename($new_name)
-     {         
-         $success = @ftp_rename($this->handle, $this->name, $new_name);
-         $this->name = $new_name;
-         
-         if( $success === false )
-             throw new cFTP_Exception("Could not rename file", 36);
-         
-         return $this;
-     }
+     }    
+
  }
 
 ?>
